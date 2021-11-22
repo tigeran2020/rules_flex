@@ -67,7 +67,7 @@ def _flex_common(ctx):
     header = None
 
     if ctx.file.src.extension == "l":
-        src_ext = "c"
+        src_ext = "cc"
 
         # The Flex manual documents that `--header-file` and `--c++` are incompatible.
         header = ctx.actions.declare_file("{}.h".format(ctx.attr.name))
